@@ -55,12 +55,15 @@ body{
     
     object-fit: cover;
 }
-.title_block{
+.title__body{
     padding-block-start: 40px;    
+}
+.title__block{
+    margin-block-end: 16px;    
 }
 .title{
     font-size: 3rem;
-    margin-block-end: 16px;
+   
 }
 .title_subscription{
     font-size: 1.3rem;
@@ -151,6 +154,7 @@ body{
     .reasons__middle{
         flex-direction: row-reverse;
     }
+    /*FOOTER SECTION*/
 }
 .footer{
     background-color: var(--main_color);
@@ -176,8 +180,6 @@ body{
     border-radius: 25px;
     background-color: var(--alternative-text);
 }
-.footer_description{
-}
 .copyright{
     padding-block: 25px;
 
@@ -185,17 +187,16 @@ body{
 
 /* FEEDBACK FROM CLIENTS*/
 
-.feedback {
-
-}
 .feedback__container{
     margin-block: 38px;
     margin-inline: 36px;
 }
 .feedback_title{
+    position: relative;
     padding-inline: 20px;
-     color: var(--main_color);
-     text-align: center;
+    color: var(--main_color);
+    text-align: center;
+    margin-block-end: 40px;
 }
 .title{
     line-height: 1.05;
@@ -221,7 +222,7 @@ body{
     flex: 1 1 30%;
     padding-inline: 12px;
     padding-block: 26px;
-   
+    min-height: 90px;
 }
 .feedback__items h6{
     font-size: 14px;
@@ -235,20 +236,17 @@ body{
     background-color: var(--main_color);
     border-radius: 18px;
     color: var(--alternative-text);
-
-
 }
 .comment {
-font-style: normal;
-font-weight: 400;
-font-size: 30px;
-line-height: 1.1;
-letter-spacing: -0.045em;
-color: var(--main_color);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.045em;
+    color: var(--main_color);
 
-   
 }
-.feedback__comment {
+.feedback__text {
     padding-bottom: 50px;
     padding-inline-end: 5px;
 }
@@ -270,13 +268,50 @@ color: var(--main_color);
     letter-spacing: -0.045em;
 }
 
+@media(min-width:799px){
+    .feedback__body{
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
+    }
+    .feedback__item{
+        flex-direction: column;
+        flex-basis: 50%;
+        margin-block: 0;
+    }
+    .feedback__comment{
+        flex-basis: 50%;
+        border-left: 1px solid gray;
+        padding-inline:28px;
+    }
+    .feedback_title{
+        padding-inline: 0;
+        margin-block-end: 120px;
+    }
+    .feedback__container{
+        margin: 100px;
+    }
+    .feedback__items {
+        padding-inline: 20px;
+        padding-block: 30px;
+        min-height: 128px;
+    }
+    .feedback_title::before{
+        content: '';
+        position: absolute;
+        top:-10px;
+        left: 45%;
+        border: 2px solid #D9D9D9;
+        width: 10%;
+    }
+
+}
+
 .background img{
         width: 100%;
 }
 
 /* Benefits Section*/
-.benefits {
-}
 .benefits__container{
     padding-block: 80px;
     padding-inline: 16px;
@@ -298,14 +333,8 @@ color: var(--main_color);
     border: 1px solid gray;
     width: 100%;
 }
-.benefits__wrapper{
-  
-
-}
 .benefits__items {
       padding-block: 20px;
-}
-.community {
 }
 .community__title {
       font-size: 30px;
@@ -323,10 +352,24 @@ color: var(--main_color);
     font-size: 16px;
     line-height: 1.1;
 }
+@media (min-width:799px){
+    .benefits__header{
+        display: flex;
+        flex-direction: row;
+        gap:50px;
+    }
+    .benefits__title{
+        flex-basis: 50%;
+    }
+    .benefits__description{
+        flex-basis: 50%;
+    }
+    .benefits__container{
+        padding-inline: 40px;
+    }
+}
 
 /*CTA section*/
-.cta {
-}
 .cta__container {
     padding-block: 50px;
     padding-inline: 40px;
@@ -334,9 +377,14 @@ color: var(--main_color);
 .imageCta{
     width: 100%;
     height: 100%;
-    display: block;
+    object-fit: cover;
+    border-radius: 20px;
 }
 .cta__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
     margin-top: 20px;
     padding: 60px;
     background-color: var(--main_color);
@@ -345,12 +393,26 @@ color: var(--main_color);
 .cta__title {
      color: var(--alternative-text);
 }
-.title {
-   
-}
 .cta__description {
      color: var(--alternative-text);
      padding-block: 20px;
+}
+@media(min-width:799px){
+    .cta__container{
+        display: flex;
+        flex-direction: row-reverse;
+        gap:20px;
+        padding-inline: 40px;
+    }
+    .cta__image{
+        flex-basis: 50%;
+        
+      
+    }
+    .cta__body{
+        flex-basis: 50%;
+        margin-top: 0px;
+    }
 }
 
 /*Expert section*/
@@ -368,4 +430,9 @@ color: var(--main_color);
 .expert__button{
     margin-top: 60px;
     text-align: center;
+}
+@media(min-width:799px){
+    .expert__container {
+    padding-inline: 80px;
+}
 }
