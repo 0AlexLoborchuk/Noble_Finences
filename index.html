@@ -4,13 +4,16 @@
 <head>
     <title>Noble Finances</title>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <meta name="author" content="Alex Lobor">
     <meta name="description" content="Training on this web application">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="image/icons/world.ico">
-    <link href="https://fonts.googleapis.com/css?family=Chocolate+Classical+Sans:regular" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -20,7 +23,7 @@
             <a class="title_header" href="#">Noble Finances</a>
             <nav>
                 <a href="#" class="menu_services">Services</a>
-                <a href="#" class="menu_button" id="headerButton">Book</a>
+                <a href="#" class="menu_button hero__button__active" id="headerButton">Book</a>
             </nav>
         </header>
         <main class="main_block">
@@ -32,7 +35,7 @@
                     <h1 class="title title__block">Financial Clarrity You Can Trust</h1>
                     <p class="title_subscription">Trusted financial guidance for every stage of life and business since
                         1987</p>
-                    <a class='menu_button'> Connect with our experts</a>
+                    <a class='menu_button hero__button__active'> Connect with our experts</a>
                 </div>
             </section>
             <section class="services">
@@ -93,21 +96,21 @@
                 <h2 class="feedback__title services_title">Hear From Our Happy Clients </h2>
                 <div class="feedback__body">
                     <div class="feedback__item">
-                        <div class="feedback__items">
+                        <button class="feedback__items" onclick="changeDescription('Graphic Designer')">
                             <h6>Graphic Designer</h6>
                             <br />
                             <span>Ontario, Canada</span>
-                        </div>
-                        <div class="feedback__items">
+                        </button>
+                        <button class="feedback__items" onclick="changeDescription('Commercial Photographer')">
                             <h6>Commercial Photographer</h6>
                             <br />
                             <span>Ontario, Canada</span>
-                        </div>
-                        <div class="feedback__items feedback__items_active">
+                        </button>
+                        <button class="feedback__items feedback__items_active" onclick="changeDescription('Stylist')">
                             <h6>Stylist</h6>
                             <br />
                             <span>Austin, Texas</span>
-                        </div>
+                        </button>
                     </div>
                     <div class="feedback__comment">
                         <p class="comment feedback__text">
@@ -115,8 +118,8 @@
                             savings.”
                         </p>
                         <div class="feedback_author">
-                            <img src="./image/icons/Margaret_L.png" title="Magraret L" class="author__icon" />
-                            <span class="author__name">Margaret L., 24 years old </span>
+                            <img src="./image/icons/Margaret_L.png" title="Margaret L" class="author__icon" />
+                            <span class="author__name">Margaret L., 24 years old</span>
                         </div>
                     </div>
                 </div>
@@ -205,7 +208,7 @@
                 <h2 class="footer__title">Noble Finances</h2>
                 <nav class="footer__menu">
                     <a href="#">Services</a>
-                    <a href="#" class="footer_button">Book An Appointment</a>
+                    <a href="#" class="footer__button ">Book An Appointment</a>
                 </nav>
             </div>
             <div class="footer__body">

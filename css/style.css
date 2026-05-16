@@ -8,6 +8,7 @@
 }
 body{
     color: var(--main_color);
+    font-family: 'Work Sans';
 }
 .wrapper{
     min-height: 100%;
@@ -44,7 +45,17 @@ body{
     color: var(--alternative-text);
     font-size: 12px;
     line-height: 1.1;
-    letter-spacing: -0.45%;
+    letter-spacing: -4.5%;
+    transition: background-color 0.3s;
+}
+.menu_button:hover{
+    background-color: var(--hero-backgroud);
+    color: var(--main_color);
+
+}
+.hero__button__active:hover{
+    background-color: var(--alternative-text);
+    color: var(--main_color);
 }
 .main_block{
     flex: 1 1 auto;
@@ -155,16 +166,20 @@ body{
     flex-direction: row;
     gap:10px;
     justify-content: space-between;
-    padding-inline-end: 30px;
+    padding-inline-end: 33px;
 }
 .reasons_label{
-    flex: 1 1 33.333%;
+    flex: 1 0 33%;
     text-align: center;
     border-radius: 8px;
     background-color: var(--alternative-text);
     padding-inline: 10px;
     padding-block: 10px;
     font-size: 12px;
+    transition: background-color 0.3s;
+}
+.reasons_label:hover{
+    background-color: var(--hero-backgroud);
 }
 
 @media (min-width:799px){
@@ -239,18 +254,22 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     margin-block: 40px;
+    gap:10px;
   
 }
 .feedback__items::before{
     content: '';
-    top:0px;
-    left: 0px;
-    width: 100%;
+    top:16px;
+    left: 10%;
+    width: 80%;
     border: 1px solid gray;
     margin-bottom: 5px;
+    position: absolute;
 }
 .feedback__items {
+    position: relative;
     flex: 1 1 30%;
+    background-color: white;
     padding-inline: 12px;
     padding-block: 26px;
     min-height: 90px;
@@ -265,7 +284,7 @@ body{
 }
 .feedback__items_active{
     background-color: var(--main_color);
-    border-radius: 18px;
+    border-radius: 8px;
     color: var(--alternative-text);
 }
 .comment {
@@ -275,6 +294,7 @@ body{
     line-height: 1.1;
     letter-spacing: -0.045em;
     color: var(--main_color);
+    min-height: 200px;
 
 }
 .feedback__text {
@@ -509,6 +529,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-block-start: 80px;
     gap:10px;
     align-items: center;
 
@@ -518,10 +539,18 @@ body{
     color: var(--main_color);
     border-radius: 25px;
     background-color: var(--alternative-text);
+    transition: background-color 0.3s;
+}
+.footer__button:hover{
+    background-color: var(--hero-backgroud);
+    color: var(--main_color);
 }
 .copyright{
     padding-block: 25px;
 
+}
+.footer__head{
+    padding-block-end: 80px;
 }
 @media (min-width:799px){
     .footer__head{
@@ -535,6 +564,7 @@ body{
         flex-basis: 50%;
     }
     .footer__menu{
+        padding-block-start: 0px;
         flex-basis: 50%;
     }
     .footer__body{
